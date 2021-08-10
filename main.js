@@ -107,15 +107,6 @@ function processCurrentText() {
     }
 }
 
-function startGame() {
-    resetValues();
-    updateQuote();
-
-    // clear old and start a new timer
-    clearInterval(timer);
-    timer = setInterval(updateTimer, 1000);
-}
-
 function resetValues() {
     timeLeft = TIME_LIMIT;
     timeElapsed = 0;
@@ -176,4 +167,13 @@ function finishGame() {
     // display the cpm and wpm
     cpm_group.style.display = "block";
     wpm_group.style.display = "block";
+}
+
+function startGame() {
+    resetValues();
+    updateQuote();
+
+    // clear old and start a new timer
+    clearInterval(timer);
+    timer = setInterval(updateTimer, 1000);
 }
